@@ -3,15 +3,15 @@ const router = express.Router();
 const authController = require('../controllers/authController');
 
 // Register a new user
-router.post('/register', authController.register);
+router.post('/register', authController.registeruser);
 
 router.post('/register', (req, res) => {
     req.body.isAdmin = true; // Set isAdmin to true for admin registration
-    authController.register(req, res);
+    authController.registeruser(req, res);
   });
 
 // Login user
-router.post('/login', authController.login);
+router.post('/login', authController.loginuser);
 
 module.exports = router;
 

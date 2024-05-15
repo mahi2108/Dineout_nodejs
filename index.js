@@ -14,7 +14,7 @@ const cors = require("cors");
 dotenv.config({ path: "config/.env" });
 app.use(
   cors({
-    origin: "*",
+    origin: "*", 
   })
 );
 
@@ -44,3 +44,5 @@ connectDatabase();
 server.listen(PORT, () => {
   console.log(`Server is running on http://localhost:${PORT}`);
 });
+
+

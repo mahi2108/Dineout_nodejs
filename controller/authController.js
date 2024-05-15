@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 const config = require('../config');
 
 // Register a new user
-exports.register = async (req, res) => {
+exports.registeruser = async (req, res) => {
   try {
     const { name, email, password } = req.body;
     // Check if user already exists
@@ -27,7 +27,7 @@ exports.register = async (req, res) => {
 };
 
 // Login user
-exports.login = async (req, res) => {
+exports.loginuser = async (req, res) => {
   try {
     const { email, password } = req.body;
     // Check if user exists
@@ -55,3 +55,4 @@ exports.login = async (req, res) => {
     res.status(500).send('Server Error');
   }
 };
+
